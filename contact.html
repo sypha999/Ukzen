@@ -148,7 +148,7 @@
                         <div class="htc__contact__form__wrap">
                             <h2 class="title__line--5" >SEND US A MESSAGE</h2>
                             <div class="contact-form-wrap">
-                                <form id="contact-form" action="mailto:info@ukzenglobal.com" method="post">
+                                <form id="contact-form" action="email.php" method="post">
                                     <div class="single-contact-inner">
                                         <div class="single-contact-form">
                                             <div class="contact-box name">
@@ -265,8 +265,6 @@
         google.maps.event.addDomListener(window, 'load', init);
 
         function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
             var mapOptions = {
                 // How zoomed in you want the map to start at (always required)
                 zoom: 12,
@@ -465,12 +463,16 @@
 
             });
         }
+
+
+        
     </script>
 
     <!-- Waypoints.min.js. -->
     <script src="js/waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
+    <script src="email.php"></script>
 
 </body>
 

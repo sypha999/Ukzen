@@ -56,7 +56,7 @@
 }
 .heaher__top__btn a {
     align-items: center;
-    background: #fcc236 none repeat scroll 0 0;
+    background: #d4af37 none repeat scroll 0 0;
     color: #fff;
     display: flex;
     font-weight: 700;
@@ -100,7 +100,7 @@
   position: relative;
 }
 .main__menu > li:hover > a{
-  color: #fcc236;
+  color: #d4af37;
 }
 .logo a{
   display: block;
@@ -145,7 +145,7 @@
     transition: 0.4s;
 }
 .htc__header__search a i:hover{
-    color: #fcc236;
+    color: #d4af37;
 }
 .htc__header__search i {
     color: #bfbfbf;
@@ -255,7 +255,7 @@
 }
 .main__menu li.drop ul.dropdown li:hover > a {
     background: #fafafa none repeat scroll 0 0;
-    color: #fcc236;
+    color: #d4af37;
 }
 
 
