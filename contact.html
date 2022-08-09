@@ -1,4 +1,4 @@
-<?php include 'email.php';?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -146,12 +146,25 @@
                         </div>
                     </div>
                 </div>
+
+                <?php 
+if(isset($_POST['submit'])){
+    $to = "datonarinze@gmail.com";
+    $from = $_POST['email'];
+    $name = $_POST['name'];
+    $subject = $_POST['subject'];
+    $message = $name ."with email " . $from . " sent the following message:" . "\n\n" . $_POST['message'];
+    $headers = "From:" . $from;
+    mail($to,$subject,$message,$headers);
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    }
+?>
                 <div class="row" align="middle">
                     <div class="col-md-12">
                         <div class="htc__contact__form__wrap">
                             <h2 class="title__line--5" >SEND US A MESSAGE</h2>
                             <div class="contact-form-wrap">
-                                <form action="email.php" method="post" enctype="application/x-www-form-urlencoded">
+                                <form  method="post">
                                     <div class="single-contact-inner">
                                         <div class="single-contact-form">
                                             <div class="contact-box name">
@@ -177,6 +190,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <?php if(!empty($message)) { ?>
+                                        <div class="contact-btn">
+                                          <strong>  <?php echo "message sent"> </strong>
+                                        </div>
+                                    <?php} ?>
                                 </form>
                             </div>
                             <div class="form-output">
